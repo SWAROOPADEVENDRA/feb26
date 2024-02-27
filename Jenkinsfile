@@ -7,7 +7,7 @@ pipeline
        {
         steps
             {
-              git "https://github.com/ramyachetty/maven.git"
+              git branch: 'main' ,credentialsid: 'your credentials is' ,url: "https://github.com/ramyachetty/maven.git"
               }
        }
       stage('clean')

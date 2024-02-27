@@ -14,14 +14,14 @@ pipeline
         {
          steps
             {
-             bat "mvn clean"
-           }
+             bat 'mvn clean'
+            }
         }
      stage('compile')
         {
          steps
             {
-             bat "mvn compile"
+             bat 'mvn compile'
            }
         }
      stage('test')
@@ -29,7 +29,7 @@ pipeline
          steps
             {
              bat "mvn test"
-           }
+            }
         }
        stage('package')
         {

@@ -7,17 +7,36 @@ pipeline
        {
         steps
             {
-              git "https://github.com/SWAROOPADEVENDRA/feb26.git"
+              git "https://github.com/ramyachetty/maven"
               }
        }
-      stage('run')
+      stage('clean')
         {
          steps
             {
-             bat "javac demo.java"
-             bat "java demo.java"
-            }
+             bat "mvn clean"
+           }
         }
-       
+     stage('compile')
+        {
+         steps
+            {
+             bat "mvn compile"
+           }
+        }
+     stage('test')
+        {
+         steps
+            {
+             bat "mvn test"
+           }
+        }
+       stage('package')
+        {
+         steps
+            {
+             bat "mvn package"
+           }
+        }
       }
     }

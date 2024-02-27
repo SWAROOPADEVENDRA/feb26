@@ -7,21 +7,21 @@ pipeline
        {
         steps
             {
-              git "https://github.com/ramyachetty/maven"
+              git "https://github.com/ramyachetty/maven.git"
               }
        }
       stage('clean')
         {
          steps
             {
-             bat 'mvn clean'
-            }
+             bat "mvn clean"
+           }
         }
      stage('compile')
         {
          steps
             {
-             bat 'mvn compile'
+             bat "mvn compile"
            }
         }
      stage('test')
